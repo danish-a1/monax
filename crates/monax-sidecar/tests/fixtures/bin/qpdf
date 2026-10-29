@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "qpdf version 11.9.1"

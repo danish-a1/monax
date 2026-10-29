@@ -1,0 +1,3 @@
+#!/bin/sh
+head -c 200000 /dev/zero | tr "\000" x
+echo

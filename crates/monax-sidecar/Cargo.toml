@@ -1,0 +1,12 @@
+[package]
+name = "monax-sidecar"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[dependencies]
+libc = { version = "0.2", default-features = false }
+thiserror = "2"
+
+[dev-dependencies]
+tempfile = "3"

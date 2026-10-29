@@ -1,0 +1,10 @@
+#!/bin/sh
+# "err": 200000 bytes of warnings on stderr, then a distinct fatal last line,
+# exit 2 (as qpdf on a damaged file). Otherwise 17 MB on stdout.
+if [ "$1" = err ]; then
+  head -c 200000 /dev/zero | tr "\000" e >&2
+  printf '\nqpdf: fatal: the real reason\n' >&2
+  exit 2
+else
+  head -c 17000000 /dev/zero
+fi

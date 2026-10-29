@@ -1,0 +1,8 @@
+#!/bin/sh
+# Forks a sleeping grandchild that keeps stdout open and writes its pid to $1;
+# with "wait" the leader sleeps too, else it exits at once.
+sleep 30 &
+echo $! > "$1"
+echo done
+[ "$2" = wait ] && sleep 30
+exit 0

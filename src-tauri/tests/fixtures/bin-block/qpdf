@@ -1,0 +1,13 @@
+#!/bin/sh
+# Fake qpdf: --requires-password answers "not encrypted" (exit 2); any other
+# call blocks until $MONAX_TEST_RELEASE exists (bounded to ~20s), then fails
+# without writing output.
+case "$1" in
+--requires-password) exit 2 ;;
+esac
+i=0
+while [ ! -e "$MONAX_TEST_RELEASE" ] && [ $i -lt 200 ]; do
+  sleep 0.1
+  i=$((i + 1))
+done
+exit 2

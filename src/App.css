@@ -1,0 +1,39 @@
+:root { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; color: #1d1d1f; background: #fff; }
+@media (prefers-color-scheme: dark) { :root { color: #f5f5f7; background: #1e1e20; } }
+body { margin: 0; }
+.app { display: grid; grid-template-columns: 200px 1fr; height: 100vh; }
+nav { padding: 12px; overflow-y: auto; border-right: 1px solid #8884; }
+nav h3 { margin: 16px 0 4px; font-size: 11px; text-transform: uppercase; opacity: .6; }
+nav button { display: block; width: 100%; text-align: left; border: 0; background: none; color: inherit; padding: 6px 8px; border-radius: 6px; font: inherit; cursor: pointer; }
+nav button[aria-current="true"] { background: #0a84ff33; }
+nav button[aria-disabled="true"] { opacity: .45; }
+main { padding: 16px 24px; overflow-y: auto; }
+button:focus-visible, input:focus-visible { outline: 2px solid #0a84ff; outline-offset: 2px; }
+.muted { opacity: .6; font-size: 13px; }
+.error { color: #d70015; }
+.toolbar { display: flex; gap: 8px; margin-bottom: 12px; }
+.toolbar button, form button { padding: 6px 12px; font: inherit; }
+.primary { margin-left: auto; }
+.field { display: flex; flex-direction: column; gap: 4px; margin: 12px 0; max-width: 280px; }
+.grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+.card button { width: 100%; border: 2px solid transparent; background: none; color: inherit; border-radius: 8px; padding: 6px; cursor: grab; }
+.card.selected button { border-color: #0a84ff; background: #0a84ff22; }
+.frame { display: flex; align-items: center; justify-content: center; height: 160px; }
+.frame img { max-width: 100%; max-height: 100%; box-shadow: 0 1px 4px #0006; }
+.num { display: block; font-size: 12px; margin-top: 4px; }
+.snippet { white-space: pre-wrap; word-break: break-all; user-select: text; padding: 8px; border: 1px solid #8884; border-radius: 6px; }
+.viewer-bar .toolbar { flex-wrap: wrap; align-items: center; }
+.field.inline { margin: 0; }
+.viewport { overflow: auto; margin: 12px 0; }
+.page { position: relative; box-shadow: 0 1px 4px #0006; background: #fff; }
+.canvas img { display: block; }
+.annots { position: absolute; inset: 0; touch-action: none; }
+.annots.drawing { cursor: crosshair; }
+.mark { stroke-width: 2; cursor: pointer; }
+.mark.highlight { fill-opacity: .4; stroke: none; }
+.mark.redact { fill: #000; fill-opacity: .5; stroke: #000; }
+.mark.selected { stroke: #0a84ff; stroke-dasharray: 4 2; }
+.mark polyline, .draft { fill: none; }
+.draft { stroke: #0a84ff; stroke-dasharray: 4 2; stroke-width: 1.5; }
+.marks ul { list-style: none; padding: 0; }
+.marks li { display: flex; gap: 8px; margin: 4px 0; }

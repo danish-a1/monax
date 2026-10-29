@@ -1,0 +1,18 @@
+#!/bin/sh
+# Fake WordCraft for tests. Logs its argv (one per line) to
+# $FAKE_WORDCRAFT_LOG; $FAKE_WORDCRAFT picks the behaviour: ok (default:
+# `convert <in> <out>` writes "converted\n<input bytes>" to <out>), none
+# (exit 0, no file), fail (prints $FAKE_WORDCRAFT_ERR, else a fixed reason,
+# to stderr, exit 1), hang (forks a sleeping grandchild, writes its pid to
+# $FAKE_WORDCRAFT_LOG.pid, sleeps).
+if [ "$1" = --version ]; then echo "wordcraft-cli 0.12.0 fake"; exit 0; fi
+log=${FAKE_WORDCRAFT_LOG:-/dev/null}
+printf '%s\n' "$@" > "$log"
+case ${FAKE_WORDCRAFT:-ok} in
+  none) exit 0 ;;
+  fail)
+    printf 'warn: x\n%s\n\n' "${FAKE_WORDCRAFT_ERR:-wordcraft-cli: not a Word document}" >&2
+    exit 1 ;;
+  hang) sleep 60 & echo $! > "$log.pid"; sleep 60; exit 0 ;;
+esac
+{ printf 'converted\n'; cat "$2"; } > "$3"

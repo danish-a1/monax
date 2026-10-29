@@ -1,0 +1,10 @@
+#!/bin/sh
+# Passes preflight, then writes a partial output and fails the real op with
+# exit 2 (qpdf uses 2 for any error, e.g. a failed write).
+case "$1" in
+--requires-password) exit 2 ;;
+esac
+for a; do last=$a; done
+echo partial > "$last"
+echo "qpdf: boom" >&2
+exit 2

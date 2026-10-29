@@ -1,0 +1,24 @@
+#!/bin/sh
+# Test double: appends its argv, and the mode and contents of every
+# --password-file / @argfile it gets, to $MONAX_QPDF_RECORD, and
+# the mode of the last argument when it exists (the output) and of every
+# existing file argument, then runs
+# $MONAX_REAL_QPDF with the same arguments.
+for a; do
+  printf 'arg %s\n' "$a" >> "$MONAX_QPDF_RECORD"
+  case "$a" in
+    --password-file=*) f=${a#--password-file=} ;;
+    @*) f=${a#@} ;;
+    *) continue ;;
+  esac
+  printf 'file %s %s\n' "$(stat -f %Lp "$f")" "$f" >> "$MONAX_QPDF_RECORD"
+  sed 's/^/line /' "$f" >> "$MONAX_QPDF_RECORD"
+  echo >> "$MONAX_QPDF_RECORD"
+done
+# Every existing file argument (or --opt=file): its mode, its directory's.
+for x; do
+  f=${x#*=}
+  [ -f "$f" ] && printf 'mode %s %s %s\n' "$(stat -f %Lp "$f")" "$(stat -f %Lp "$(dirname "$f")")" "$f" >> "$MONAX_QPDF_RECORD"
+done
+[ -e "$a" ] && printf 'last %s %s\n' "$(stat -f %Lp "$a")" "$a" >> "$MONAX_QPDF_RECORD"
+exec "$MONAX_REAL_QPDF" "$@"

@@ -1,0 +1,2 @@
+#!/bin/sh
+printf '%s' "$MONAX_TEST_ENV"

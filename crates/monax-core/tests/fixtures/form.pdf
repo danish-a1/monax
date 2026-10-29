@@ -1,0 +1,119 @@
+%PDF-1.7
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R /AcroForm << /Fields [10 0 R 12 0 R 13 0 R 14 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R] /DA (/Helv 10 Tf 0 g) /DR << /Font << /Helv 4 0 R /ZaDb 5 0 R >> >> >> >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 300 300] /Contents 6 0 R /Resources << /Font << /Helv 4 0 R >> >> /Annots [11 0 R 12 0 R 13 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R] >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /ZapfDingbats >>
+endobj
+6 0 obj
+<<  /Length 36 >>
+stream
+BT /Helv 8 Tf 20 285 Td (Form) Tj ET
+endstream
+endobj
+10 0 obj
+<< /T (person) /Kids [11 0 R] >>
+endobj
+11 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /Parent 10 0 R /T (name) /FT /Tx /V (Ann) /DA (/Helv 10 Tf 0 g) /Rect [20 250 180 270] /AP << /N 30 0 R >> >>
+endobj
+12 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /T (email) /FT /Tx /MaxLen 10 /DA (/Helv 10 Tf 0 g) /Rect [20 220 180 240] >>
+endobj
+13 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /T (agree) /FT /Btn /V /Off /AS /Off /MK << /CA (4) >> /DA (/ZaDb 0 Tf 0 g) /Rect [20 190 40 210] /AP << /N << /Agreed 31 0 R /Off 32 0 R >> >> >>
+endobj
+14 0 obj
+<< /T (color) /FT /Btn /Ff 49152 /V /Off /Kids [15 0 R 16 0 R] >>
+endobj
+15 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /Parent 14 0 R /AS /Off /MK << /CA (l) >> /DA (/ZaDb 0 Tf 0 g) /Rect [20 160 40 180] /AP << /N << /red 31 0 R /Off 32 0 R >> >> >>
+endobj
+16 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /Parent 14 0 R /AS /Off /MK << /CA (l) >> /DA (/ZaDb 0 Tf 0 g) /Rect [50 160 70 180] /AP << /N << /blue 31 0 R /Off 32 0 R >> >> >>
+endobj
+17 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /T (size) /FT /Ch /Ff 131072 /Opt [[(S) (Small)] (M) (L)] /V (M) /DA (/Helv 10 Tf 0 g) /Rect [20 130 120 150] >>
+endobj
+18 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /T (fruit) /FT /Ch /Opt [(Apple) (Pear)] /DA (/Helv 10 Tf 0 g) /Rect [20 80 120 120] >>
+endobj
+19 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /T (go) /FT /Btn /Ff 65536 /Rect [150 190 200 210] >>
+endobj
+20 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /T (sig) /FT /Sig /Rect [150 130 280 160] >>
+endobj
+21 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /T (locked) /FT /Tx /Ff 1 /V (fixed) /DA (/Helv 10 Tf 0 g) /Rect [150 80 280 100] >>
+endobj
+22 0 obj
+<< /Type /Annot /Subtype /Widget /F 4 /P 3 0 R /T (note) /FT /Ch /Ff 393216 /Opt [(a) (b)] /DA (/Helv 10 Tf 0 g) /Rect [150 50 280 70] >>
+endobj
+30 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 160 20] /Resources << /Font << /Helv 4 0 R >> >> /Length 49 >>
+stream
+/Tx BMC BT /Helv 10 Tf 0 g 2 6 Td (Ann) Tj ET EMC
+endstream
+endobj
+31 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 20 20] /Length 18 >>
+stream
+0 g 3 3 14 14 re f
+endstream
+endobj
+32 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 20 20] /Length 22 >>
+stream
+0 G 0.5 0.5 19 19 re S
+endstream
+endobj
+xref
+0 33
+0000000000 65535 f 
+0000000009 00000 n 
+0000000222 00000 n 
+0000000279 00000 n 
+0000000494 00000 n 
+0000000591 00000 n 
+0000000664 00000 n 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000751 00000 n 
+0000000800 00000 n 
+0000000973 00000 n 
+0000001114 00000 n 
+0000001324 00000 n 
+0000001406 00000 n 
+0000001600 00000 n 
+0000001795 00000 n 
+0000001971 00000 n 
+0000002122 00000 n 
+0000002239 00000 n 
+0000002347 00000 n 
+0000002495 00000 n 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000002649 00000 n 
+0000002839 00000 n 
+0000002956 00000 n 
+trailer
+<< /Size 33 /Root 1 0 R >>
+startxref
+3077
+%%EOF

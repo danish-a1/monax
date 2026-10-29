@@ -1,0 +1,10 @@
+#!/bin/sh
+# Test double for tesseract: records its argv, TESSDATA_PREFIX and the mode
+# of its input image to $MONAX_TESS_RECORD. MONAX_TESS_MODE=slow sleeps (to
+# be cancelled); otherwise it fails like tesseract with a reason naming the
+# data dir it was given.
+{ printf 'arg %s\n' "$@"; printf 'prefix %s\n' "$TESSDATA_PREFIX"
+  printf 'mode %s %s\n' "$(stat -f %Lp "$1")" "$1"; } >> "$MONAX_TESS_RECORD"
+[ "$MONAX_TESS_MODE" = slow ] && exec sleep 30
+echo "Error opening data file $TESSDATA_PREFIX/eng.traineddata" >&2
+exit 1

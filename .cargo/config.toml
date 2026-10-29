@@ -1,0 +1,2 @@
+[env]
+MONAX_LIBPDFIUM = { value = "vendor/pdfium/lib/libpdfium.dylib", relative = true }

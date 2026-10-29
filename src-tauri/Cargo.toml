@@ -1,0 +1,45 @@
+[package]
+name = "monax"
+version = "0.1.0"
+description = "Monax - local PDF editor"
+authors = ["monax"]
+edition = "2024"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "monax_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+monax-core = { path = "../crates/monax-core" }
+monax-sidecar = { path = "../crates/monax-sidecar" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# Embedded MCP server: streamable HTTP via rmcp, served by axum on Tauri's tokio runtime.
+rmcp = { version = "3.8", default-features = false, features = ["server", "transport-streamable-http-server"] }
+axum = { version = "0.8", default-features = false, features = ["http1", "tokio"] }
+tokio = { version = "1", features = ["net", "rt"] }
+getrandom = "0.4"
+schemars = "1"
+tempfile = "3"
+tauri-plugin-dialog = "2"
+
+# Read the optimization guideline for more details: https://tauri.app/concept/size/#cargo-configuration
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+panic = "abort"
+strip = true
+
+[dev-dependencies]
+tauri = { version = "2", features = ["test"] }

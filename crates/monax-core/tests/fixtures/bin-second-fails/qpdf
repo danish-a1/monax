@@ -1,0 +1,13 @@
+#!/bin/sh
+# Passes preflight; the first output call succeeds, every later one exits 2.
+case "$1" in
+--requires-password) exit 2 ;;
+esac
+for a; do last=$a; done
+m="$(dirname "$last")/.marker"
+if [ -e "$m" ]; then
+  echo "qpdf: boom" >&2
+  exit 2
+fi
+: > "$m"
+echo x > "$last"

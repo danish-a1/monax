@@ -1,0 +1,4 @@
+#!/bin/sh
+printf "out:%s\n" "$@"
+echo "err:$#" >&2
+exit 3
