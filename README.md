@@ -1,6 +1,6 @@
 # Monax
 
-Monax is a local, offline PDF editor for macOS with the tool set of Sejda PDF Desktop:
+Monax is a local, offline PDF editor for macOS with a full desktop tool set:
 merge, split, organize, compress, watermark, encrypt, redact, OCR, forms, sign, convert
 and annotate. There is no account, no license server, no subscription and no network
 access at runtime. An embedded MCP server lets an agent such as Claude Code drive every
